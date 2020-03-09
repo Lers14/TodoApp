@@ -1,0 +1,39 @@
+<center>
+<p id="notice"><%= notice %></p>
+<% if user_signed_in?%>
+<h1>Tareas</h1>
+<table>
+  <thead>
+    <tr>
+      <th class="tdf" style="width:20%">Nombre</th>
+      <th class="tdf" style="width:40%">Descripcion</th>
+      <th class="tdf" style="width:20%">Importancia</th>
+      <th class="tdf" style="width:20%">Fecha</th>
+      <th colspan="5" class="tdf" style="width:40%">Opciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tareas.each do |tarea| %>
+      <tr>
+        <td class="tdq"><%= tarea.Nombre %></td>
+        <td class="tdq"><%= tarea.descripcion %></td>
+        <td class="tdq"><%= tarea.importancia %></td>
+        <td class="tdq"><%= tarea.fecha %></td>
+        <td class="tdq"><%= link_to 'Mostrar', tarea %></td>
+        <td class="tdq"><%= link_to 'Editar', edit_tarea_path(tarea) %></td>
+        <td class="tdq"><%= link_to 'Eliminar', tarea, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+        <td class="tdq" colspan="2"><%= link_to 'Generar Pdf' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Inicio', index_path %> |
+<%= link_to 'Nueva Tarea', new_tarea_path %>
+<% else %>
+      <script>
+        window.location.href = "/users/sign_in";
+      </script>
+<% end %>
+</center>

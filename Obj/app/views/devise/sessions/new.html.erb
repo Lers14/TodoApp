@@ -1,0 +1,31 @@
+<h4 style="width: auto; text-align: right;">
+</h4>
+<center>
+<h2 style="color: white; text-align: center;">Ingresar</h2>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Contraseña %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :Recordar %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Ingresar" %>
+  </div>
+  <%= link_to 'Olvido su contraseña?',new_user_password_path %>
+  <br>
+  <br>
+<% end %>
+</center>
+

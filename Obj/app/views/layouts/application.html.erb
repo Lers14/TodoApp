@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Obj</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">    
+  </head>
+
+  <body class="contenedor">
+    <ul>
+    <% if user_signed_in?%>
+    <li>
+    <%= link_to 'Salir', destroy_user_session_path, method: :delete%>
+    </li>
+    <li>
+    <%= link_to 'Ajustes', edit_user_registration_path%>
+    </li>
+    <% else %>
+    <li>
+      <%= link_to 'Iniciar Sesion', new_user_session_path %>      
+    </li>
+    <li>
+      <%= link_to 'Registarse', new_user_registration_path %>
+    </li>
+    <% end %>
+    </ul>
+    <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

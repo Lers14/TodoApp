@@ -1,0 +1,16 @@
+
+<center>
+	<div class="reto"|>
+	<% if user_signed_in?%>
+    	<h2>Reto #2	</h2>
+    		Bienvenido <%= current_user.name%><br>
+    		<%= link_to "Ver tareas", tareas_path %><br>
+    		<%= link_to "Generar PDF", generate_pdf_path(format: :pdf) %>	
+    <% else %>
+     Inicie sesion o registrese para poder hacer uso de esta pagina
+    <% end %>
+<br>
+<br>
+</div>
+</div>
+ 

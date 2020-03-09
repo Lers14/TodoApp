@@ -1,0 +1,125 @@
+.contenedor{
+	 background: rgba(11,62,71,1) 20%;
+	 //background-color: linear-gradient(180deg, rgba(9,10,10,1) 0%,  29%, rgba(13,116,138,1) 100%, rgba(13,73,85,1) 100%, rgba(20,179,212,1) 100%, rgba(38,144,210,1) 100%); 
+   	margin:0px;
+	padding: 0px;
+	color: white;  
+	font-family: 'Trade Winds', cursive;
+}
+
+form{
+	width: 350px;
+	height: auto;
+	background-color: rgb(42,83,108);	
+    align-items: center;
+    border: none;
+    padding-top: 10px;
+    border-radius: 6px;
+    color: white;
+  	text-align:center;
+  	box-shadow: 0px 0px 5px 0px rgba(237,225,237,1);
+  	border: white 5px solid;
+}
+form input submit{
+	background-color:rgba(69,69,69,1);
+	width: 130px;
+	height: 40px;
+	color: white;
+	border-radius: 6px;
+	margin-bottom: 11px;
+	border:none;
+}
+form input{
+	width:auto;
+	height:30px;
+	border:none;
+	border-radius:3px;
+	margin: 10px;
+	color: black;
+}
+form label{
+	color: white;
+}
+li a:link{
+	text-decoration:none;
+	color:white;
+}
+li a:visited{
+	color:white;
+}
+td a:link{
+	text-decoration:none;
+	color:white;
+}
+td a:visited{
+	color:white;
+}
+.contenedor a:link{
+	text-decoration:none;
+	color:white;
+}
+.contenedor a:visited{
+	color:white;
+}
+.reto{
+	width: 1000px;
+	height: auto;
+	background-color: dimgrey;
+	text-align:center;
+	border-radius: 3px;
+	color:white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  widht: 2200px;
+  font-family: 'Trade Winds', cursive;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Trade Winds', cursive;
+}
+ul li a:hover {
+  background-color: #111;
+}
+.tdq a:hover {
+  background-color: rgb(42,83,108);
+}
+.contenedor a:hover {
+  background: rgba(11,62,71,1) 20%;
+}
+table{
+	width: 850px;
+	height: auto;
+	background-color: rgb(42,83,108);	
+    align-items: center;
+    border: none;
+    padding-top: 10px;
+    border-radius: 6px;
+    color: white;
+  	text-align:center;
+  	box-shadow: 0px 0px 5px 0px rgba(237,225,237,1);
+  	border: white 5px solid;
+}
+.tdf{
+	
+	color:white;
+	font-weight: 900;
+	font-size: 17px;
+	font-family: 'Trade Winds', cursive;
+}
+.tdq{
+	 font-family: 'Acme', sans-serif;
+}
